@@ -1,0 +1,33 @@
+footer {
+    background-color: #474747;
+    text-align: center;
+    padding: 2rem 0;
+    color: #fff;
+}
+
+footer h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem; 
+}
+
+.sns-links {
+    display: flex;
+    justify-content: center;
+    list-style: none; 
+    padding: 0;
+    margin: 0;
+    gap: 20px; 
+}
+.sns-links li a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.sns-links img {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+}
