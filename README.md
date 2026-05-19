@@ -1,16 +1,38 @@
-# React + Vite
+# 라우터 프로젝트 🗺️
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+React Router를 활용해 멀티 페이지 구조를 구현한 프로젝트입니다.
 
-Currently, two official plugins are available:
+## 📌 프로젝트 소개
+홈 / 소개 / 회사 / 게시판 페이지를 라우팅으로 연결하고
+Header / Footer 공통 레이아웃을 유지하면서 페이지 간 이동을 구현했습니다.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ⚙️ 주요 기능
+- NavLink 활성 페이지 스타일 자동 적용
+- 동적 라우팅 (useParams로 URL 파라미터 추출)
+- 홈 Swiper 슬라이더 (Navigation / Pagination / Autoplay)
+- 게시판 목록 데이터 렌더링
+- 404 NotFound 페이지 처리
 
-## React Compiler
+## 📁 페이지 구조
+```
+/           → 홈 (Swiper 슬라이더)
+/about      → 소개
+/about/:id  → 소개 상세
+/board      → 게시판 목록
+/board/:id  → 게시글 상세
+/company    → 회사 소개
+*           → 404 NotFound
+```
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🛠 사용 기술
+- React
+- React Router DOM
+- Swiper
+- Vite
+- CSS
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🚀 실행 방법
+```bash
+npm install
+npm run dev
+```
